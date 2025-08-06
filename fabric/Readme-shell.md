@@ -25,15 +25,15 @@ Customers can play, get hands-on experience navigating through the demo environm
 - [Before Starting](#before-starting)
   - [Task 1: Power BI Workspace creation](#task-1-power-bi-workspace-creation)
   - [Task 2: Run the Cloud Shell to provision the demo resources](#task-2-run-the-cloud-shell-to-provision-the-demo-resources)
-  - [Task 3: Creating a Shortcut in Lakehouse](#task-3-creating-a-shortcut-in-lakehouse)
-  - [Task 4: Setting up the Warehouse](#task-4-setting-up-the-warehouse)
-  - [Task 5: Excecuting Notebooks](#task-5-excecuting-notebooks) 
+  <!-- - [Task 3: Creating a Shortcut in Lakehouse](#task-3-creating-a-shortcut-in-lakehouse) -->
+  - [Task 3: Setting up the Warehouse](#task-3-setting-up-the-warehouse)
+  <!-- - [Task 5: Excecuting Notebooks](#task-5-excecuting-notebooks) 
     - [Creating a new Runtime](#creating-a-new-runtime)
 	- [Running Notebooks](#running-notebooks)
-  - [Task 6: Creating Internal Shortcut](#task-6-creating-internal-shortcut)
-  - [Task 7: KQL DB and QuerySet creation](#task-7-kql-db-and-queryset-creation)
-  - [Task 8: Enabling Data Activator](#task-8-enabling-data-activator)
-  - [Task 9: Creating Semantic Model for PowerBI Copilot](#task-9-creating-semantic-model-for-powerbi-copilot)
+  - [Task 6: Creating Internal Shortcut](#task-6-creating-internal-shortcut) -->
+  - [Task 4: KQL DB and QuerySet creation](#task-4-kql-db-and-queryset-creation)
+  - [Task 5: Enabling Data Activator](#task-5-enabling-data-activator)
+  - [Task 6: Creating Semantic Model for PowerBI Copilot](#task-6-creating-semantic-model-for-powerbi-copilot)
 
 - [Appendix](#appendix)
   - [Setting up the Lakehouse](#setting-up-the-lakehouse)
@@ -229,6 +229,10 @@ Command:
 git clone -b microsoftfabric2.0 --depth 1 --single-branch https://github.com/microsoft/Azure-Analytics-and-AI-Engagement.git fabric
 ```
 
+<!-- ```
+git clone --branch microsoftfabric2.0 --single-branch https://daidemos@dev.azure.com/daidemos/DREAMDemos/_git/DREAMPoC
+``` -->
+
    ![Git Clone Command to Pull Down the demo Repository.](media/cloud-shell-4.5.png)
 	
    > **Note:** If you get File already exist error, please execute the following command to delete existing clone and then reclone:
@@ -247,34 +251,36 @@ cd ./fabric/fabric
 ```
     
    ![Commands to run the PowerShell Script.](media/cloud-shell-5.1.png)
-      
-10. From the Azure Cloud Shell, **copy** the authentication code. You will need to enter this code in next step.
 
-11. **Click** the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
+10. **Press** **Y** and click on **Enter** button.
+      
+![Yes.](media/yes.png)
+
+11. From the Azure Cloud Shell, **copy** the authentication code. You will need to enter this code in next step.
+
+12. **Click** the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) and a new browser window will launch.
 
 	![Authentication link and Device Code.](media/cloud-shell-6.png)
      
-12. **Paste** the authentication code.
+13. **Paste** the authentication code.
 
-	<img src="media/cloud-shell-7.png" alt="drawing" width="400"/>
+	![box](media/cloud-shell-7.png) 
 
-13. **Select** the user account that is used for logging into the Azure Portal in [Task 1](#task-1-create-a-resource-group-in-azure).
+14. **Select** the user account that is used for logging into the Azure Portal in [Task 1](#task-1-create-a-resource-group-in-azure).
 
-	<img src="media/cloud-shell-8.png" alt="drawing" width="400"/>
+![box](media/cloud-shell-8.png) 
 
-14. **Click** on **Continue** button.
+15. **Click** on **Continue** button.
 
-	<img src="media/cloud-shell-8.1.png" alt="drawing" width="400"/>
+![box](media/cloud-shell-8.1.png) 
 
-15. **Close** the browser tab when you see the message box.
+16. **Close** the browser tab when you see the message box.
 
 	![box](media/cloud-shell-9.png)   
 
-16. **Navigate back** to your **Azure Cloud Shell** execution window.
+17. **Navigate back** to your **Azure Cloud Shell** execution window.
 
-17. **Copy** the code on screen to authenticate the Azure PowerShell script for creating reports in Power BI.
-
-18. **Click** the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).
+18. **Copy** the code on screen to authenticate the Azure PowerShell script for creating reports in Power BI. **Click** the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).
 
 	![Authentication link and Device code.](media/cloud-shell-10.png)
 
@@ -282,7 +288,7 @@ cd ./fabric/fabric
 
 20. **Paste** the authentication code you copied from the shell above.
 
-	<img src="media/cloud-shell-11.png" alt="drawing" width="400"/>
+	![box](media/cloud-shell-11.png) 
 
 21. **Select** the user account that is used for logging into the Azure Portal in [Task 1](#task-1-create-a-resource-group-in-azure).
 
@@ -290,11 +296,11 @@ cd ./fabric/fabric
 
 22. **Click** on 'Continue'.
 
-	<img src="media/cloud-shell-12.1.png" alt="drawing" width="400"/>
+	![box](media/cloud-shell-12.1.png) 
 
 23. **Close** the browser tab once you see the message box.
 
-	<img src="media/cloud-shell-13.png" alt="drawing" width="400"/>
+	![box](media/cloud-shell-13.png) 
 
 24. **Go back** to Azure Cloud Shell execution window.
 
@@ -331,7 +337,7 @@ cd ./fabric/fabric
       
 31. In the new browser tab, **paste** the code you copied from the shell in step 30 and **click** on **Next**.
 
-	<img src="media/cloud-shell-17.png" alt="drawing" width="400"/>
+![box](media/cloud-shell-17.png) 
 
 	> **Note:** Be sure to provide the device code before it expires and let the script run until completion.
 
@@ -341,7 +347,7 @@ cd ./fabric/fabric
 
 33. **Click** on **Continue**.
 
-	<img src="media/cloud-shell-18.1.png" alt="drawing" width="400"/>
+	![box](media/cloud-shell-18.1.png) 
 
 34. **Close** the browser tab when you see the message box.
 
@@ -351,29 +357,41 @@ cd ./fabric/fabric
 
 35. **Navigate back** to your Azure Cloud Shell execution window.
 
+36. When it asks for **Are you sure?** press **Y** and click on **Enter** button.
+
+![](media/internalshortcut1.png)
+
+37. Repeat **step 36** for 4 more times.
+
+![](media/internalshortcut2.png)
+
+38. When it asks for **Are you sure?** press **Y** and click on **Enter** button.
+
+![](media/externalshortcut.png)
+
 	> **Note:** Deployment will take approximately 20-30 minutes to complete. Keep checking the progress with messages printed in the console to avoid timeout.
 
-36. After  script execution is complete, the "--Execution Complete--" prompt appears.
-	
-37. **Go to** Azure Portal and **search** for 'fabric-dpoc' and **click** on the resource group name created by the script.
+39. After  script execution is complete, the "--Execution Complete--" prompt appears.
+<!-- 	
+40. **Go to** Azure Portal and **search** for 'fabric-dpoc' and **click** on the resource group name created by the script.
 
 	![Close the browser.](media/demo-1.1.png)
 
 	>**Note:** The resource group name starts with 'fabric-dpoc-' with a random unique suffix in the end.
 
-38. In the search pane of the resource group, **type** "app-realtime-kpi-analytics..." and **select** the resource.
+41. In the search pane of the resource group, **type** "app-realtime-kpi-analytics..." and **select** the resource.
 
 	![Close the browser.](media/demo-1.png)
 
-39. **Click** on **Browse** and a new tab will open.
+42. **Click** on **Browse** and a new tab will open.
 
 	![Close the browser.](media/demo-2.png)
 
-40. **Wait** for the tab to load the following screen.
+43. **Wait** for the tab to load the following screen.
 
-	![Close the browser.](media/demo-3.png)
+	![Close the browser.](media/demo-3.png) -->
 
-### Task 3: Creating a Shortcut in Lakehouse
+<!-- ### Task 3: Creating a Shortcut in Lakehouse
 
 1. **Open** [Power BI](app.powerbi.com).
 
@@ -454,9 +472,9 @@ cd ./fabric/fabric
 27. **Click** on the **Create** button.
 
 	![Lakehouse.](media/lakehouse-3.png)
+ -->
 
-
-### Task 4: Setting up the Warehouse
+<!-- ### Task 3: Setting up the Warehouse
 
 1. In PowerBI, **click** on **Workspaces** and **select** the **contosoSales** workspace. 
 
@@ -563,113 +581,127 @@ step 28, and **click** on the 'Next' button.
 
 >**Note:** Please wait for the resultant data to load.
 
-31. **Wait** for the status of pipeline to display 'Succeeded' and **go back** the the Data Warehouse from the workspace.
+31. **Wait** for the status of pipeline to display 'Succeeded' and **go back** the the Data Warehouse from the workspace. -->
 
-32. **Open** the Data Warehouse and **click** 'New SQL query'.
+### Task 3: Setting up the Warehouse
+
+1. In PowerBI, **click** on **Workspaces** and **select** the **contosoSales** workspace. 
+
+    ![Lakehouse.](media/demo-4.png)
+
+2. **Filter** and **Select** '"Data Warehouse." 
+
+	![Datawarehouse.](media/warehouse-1a.png)
+
+3. **Open** 'salesDW'.
+
+>**Note:** warehouses will have a concatenated suffix, resulting in names like 'salesDW_SUFFIX'
+
+4. **Open** the Data Warehouse and **click** 'New SQL query'.
 
 	![Datawarehouse.](media/warehouse-18.1.png)
 
-33. **Click** on [Warehouse Scripts](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/tree/microsoftfabric2.0/fabric/artifacts/warehousescripts) link to open the scripts.
+5. **Click** on [Warehouse Scripts](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/tree/microsoftfabric2.0/fabric/artifacts/warehousescripts) link to open the scripts.
 
-34. **Click** on the first script to open it.
+6. **Click** on the first script to open it.
 
 	![Datawarehouse.](media/warehouse-19.png)
 
-35. In a new tab **open** the resource group created in [Task 2](#task-2-run-the-cloud-shell-to-provision-the-demo-resources).
+7. In a new tab **open** the resource group created in [Task 2](#task-2-run-the-cloud-shell-to-provision-the-demo-resources).
 
-36. **Search** for the 'Storage account' **copy** the 'Storage account' name and **paste** it in a notepad for further use.
+8. **Search** for the 'Storage account' **copy** the 'Storage account' name and **paste** it in a notepad for further use.
 
 	![Datawarehouse.](media/warehouse-22.png)
 
-37. **Click** on searched 'Storage account', **scrolldown** left pane and **click** to select 'Shared access signature'.
+9. **Click** on searched 'Storage account', **scrolldown** left pane and **click** to select 'Shared access signature'.
 
 	![Datawarehouse.](media/warehouse-23.png)
 
-38. **Select** 'Container' in 'Allowed resource type'. **select** 'Read','Write', 'List' in 'Allowed permissions' keep  rest all uncheck. In 'Start and expiry date/time' **select** date & time and then **scrolldown** to **click** 'Generate SAS and connection string' button.
+10. **Select** 'Container' in 'Allowed resource type'. **select** 'Read','Write', 'List' in 'Allowed permissions' keep  rest all uncheck. In 'Start and expiry date/time' **select** date & time and then **scrolldown** to **click** 'Generate SAS and connection string' button.
 
-	![Datawarehouse.](media/warehouse-24.png)
+![Datawarehouse.](media/warehouse-24.png)
 
-	![Datawarehouse.](media/warehouse-25.png)
+![Datawarehouse.](media/warehouse-25.png)
 
-39. Below the 'Generate SAS and connection string' button, we can see the generated SAS token. **Copy** and paste it into notepad for further use.
+11. Below the 'Generate SAS and connection string' button, we can see the generated SAS token. **Copy** and paste it into notepad for further use.
 
 	![Datawarehouse.](media/warehouse-26.png)
 
-40. **Click** '00 Ingest Data In DW Using COPY INTO Command.sql' file and **copy** the script and **replace** '#STORAGE_ACCOUNT_NAME#' and '#STORAGE_ACCOUNT_SAS_TOKEN#' with the appropriate values copied in earlier steps.
+12. **Click** '00 Ingest Data In DW Using COPY INTO Command.sql' file and **copy** the script and **replace** '#STORAGE_ACCOUNT_NAME#' and '#STORAGE_ACCOUNT_SAS_TOKEN#' with the appropriate values copied in earlier steps.
 
-41. **Copy** the script.
+13. **Copy** the script.
 
 	![Datawarehouse.](media/warehouse-19.1.png)
 
-42. **Navigate back** to 'salesDW' warehouse explorer to execute SQL scripts and **click** 'New SQL query'. In dropdown, **click** 'New SQL query' again.
+14. **Navigate back** to 'salesDW' warehouse explorer to execute SQL scripts and **click** 'New SQL query'. In dropdown, **click** 'New SQL query' again.
 
 	![Datawarehouse.](media/warehouse-21.png)
 
-43. Once the SQL editor opens, **paste** the script which we have modified in step 41. **Right click** on 'SQL query 1' and **click** 'Rename'.
+15. Once the SQL editor opens, **paste** the script which we have modified in step 41. **Right click** on 'SQL query 1' and **click** 'Rename'.
 
 	![Datawarehouse.](media/warehouse-27.png)
 
-44. **Enter** the name as '00 Ingest Data In DW Using COPY INTO Command.sql' and **click** 'Rename' button.
+16. **Enter** the name as '00 Ingest Data In DW Using COPY INTO Command.sql' and **click** 'Rename' button.
 
 	![Datawarehouse.](media/warehouse-28.png)
 
-45. **Click** the 'three dots (Ellipsis)' in front of the name of the scripts and **select** 'Move to Shared queries'.
+17. **Click** the 'three dots (Ellipsis)' in front of the name of the scripts and **select** 'Move to Shared queries'.
 
 	![Datawarehouse.](media/warehouse-29.png)
 
 >**Note:** We are going to create 6 more scripts following the above steps for querying the Warehouse data.
 
-46. **Repeat** the steps (33-45) for the other six scripts in the repository. Get the scripts [HERE](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/tree/microsoftfabric2.0/fabric/artifacts/warehousescripts)
+18. **Repeat** the steps (33-45) for the other six scripts in the repository. Get the scripts [HERE](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/tree/microsoftfabric2.0/fabric/artifacts/warehousescripts)
 
 >**Note:** If there are no replacements necessary in the scripts, you can skip the steps in between.
 
-47. **Click** 'New visual query'.
+19. **Click** the drop-down beside **New SQL Query** on the top ribbon bar, and then select **New Visual Query.**
 
-	![Datawarehouse.](media/warehouse-30.png)
+	![Datawarehouse.](media/warehouse-30.1.png)
 
-48. **Click** and **drag** the table 'DimProduct' to the canvas.
+20. **Expand** `salesDW_...`, then expand *8Schemas*, **dbo**, and **Tables**. **Click** and **drag** the table **DimProduct** to the canvas.
 
 	![Datawarehouse.](media/warehouse-31.png)
 
-49. **Click** and **drag** the table 'FactSales' to the canvas.
+21. **Click** and **drag** the table 'FactSales' to the canvas.
 
 	![Datawarehouse.](media/warehouse-40.png)
 
-50. **Click** 'Combine' and **select** 'Merge queries as new'.
+22. **Click** 'Combine' and **select** 'Merge queries as new'.
 
 	![Datawarehouse.](media/warehouse-32.png)
 
-51. In the 'Left table for merge' **select** 'DimProduct' from the dropdown and **click** on column 'ProductKey' of the table.
+23. In the 'Left table for merge' **select** 'DimProduct' from the dropdown and **click** on column 'ProductKey' of the table.
 
 	![Datawarehouse.](media/warehouse-33.png)
 
-52. **Scroll down** in the 'Right table for merge' **select** 'FactSales' from the dropdown and **click** on column 'ProductKey' of the table.
+24. **Scroll down** in the 'Right table for merge' **select** 'FactSales' from the dropdown and **click** on column 'ProductKey' of the table.
 
 	![Datawarehouse.](media/warehouse-34.png)
 
-53. **Scroll down** to Join kind section and **click** on 'Inner' radio button and click on 'OK' button.
+25. **Scroll down** to Join kind section and **click** on 'Inner' radio button and click on 'OK' button.
 
 	![Datawarehouse.](media/warehouse-35.png)
 
-54. You would see the following result.
+26. You would see the following result.
 
 	![Datawarehouse.](media/warehouse-36.png)
 
-55. **Right click** on 'Visual query 1' and **select** 'Rename'.
+27. **Right click** on 'Visual query 1' and **select** 'Rename'.
 
 	![Datawarehouse.](media/warehouse-37.png)
 
-56. **Enter** the name as "Visual query- Total Sales By Product" and **click** on 'Rename' button.
+28. **Enter** the name as "Visual query- Total Sales By Product" and **click** on 'Rename' button.
 
 	![Datawarehouse.](media/warehouse-38.png)
 
-57. **Click** on the 'three dots' infront of the visual query name and **click** one 'Moved to Shared queries'
+29. **Click** on the 'three dots' infront of the visual query name and **click** one 'Moved to Shared queries'
 
 	![Datawarehouse.](media/warehouse-39.png)
 
 ### Task 5: Excecuting Notebooks
 
-### Creating a new Runtime
+<!-- ### Creating a new Runtime
 
 1. In the workspace **click** on the "02 Bronze to Silver layer_ Medallion Architecture" notebook.
 
@@ -681,68 +713,19 @@ step 28, and **click** on the 'Next' button.
 
 3. **Enter** name for environment as 'salesEnvironment'
     
-	![Datawarehouse.](media/envname.png)
+	![Datawarehouse.](media/envname.png) -->
 
 ### Running Notebooks
 
-1. In the workspace **click** on the "02 Bronze to Silver layer_ Medallion Architecture" notebook.
+1. In the workspace **click** on the "04 Churn Prediction Using MLFlow From Silver To Gold Layer" notebook.
 
-	![Datawarehouse.](media/notebook-6.png)
+	![Datawarehouse.](media/runnotebook.png)
 
-2. In the left pane **click** on 'Missing Lakehouse' button and **select** 'Remove all Lakehouses'.
+2. **Click** on the 'Run all' button.
 
-	![Datawarehouse.](media/notebook-11.png)
+	![Close the browser.](media/runnotebook2.png)
 
->**Note:** In case you do not see Missing lakehouse, you would see 'lakehouse{Name}', click on the same to get the 'Remove all Lakehosues' option.
-
-3. **Click** on 'Continue' in the pop-up window.
-
-	![Datawarehouse.](media/notebook-12.png)
-
-4. In the left pane **click** on the 'Add' button.
-
-	![Datawarehouse.](media/notebook-13.png)
-
-5. In the pop-up **select** 'Existing Lakehouse' radio button and then **click** on 'Add' button.
-
-	![Datawarehouse.](media/notebook-14.png)
-
-6. **Click** on 'lakehouseSilver' checkbox and **click** on 'Add'.
-
-	![Datawarehouse.](media/notebook-15.png)
-
-7. Similarly **perform** step number 1 to step number 6 for the other notebooks as well.
-
->**Note:** To perform the above steps you need to attach the notebooks to respective lakehouses before running the notebooks. Follow the below instruction for the same.
-
-8. Refer the below table to attach notebooks with the respective lakehouses
-
-	|	Notebook	|	Lakehouse	|
-	| -----------	| ------------- |
-	|	01 Marketing Data to Lakehouse (Bronze) - Code-First Experience.ipynb	|	lakehouseBronze	|
-	|	02 Bronze to Silver layer_ Medallion Architecture.ipynb	|	lakehouseSilver	|
-	|	03 Silver to Gold layer_ Medallion Architecture.ipynb	|	lakehouseGold	|
-	|	04 Churn Prediction Using MLFlow From Silver To Gold Layer	|	lakehouseSilver	|
-	|	05 Sales Forecasting for Store items in Gold Layer	|	lakehouseSilver	|
-	|||
-
->**Note:** Please complete Task 6 and then execute notebook '05 Sales Forecasting for Store items in Gold Layer'.
-
-> Please comeback to continue with the below given steps after completing Task 6
-
-9. In PowerBI workspace **click** on 'Workspaces' and **select** 'contosoSales'.
-
-	![Close the browser.](media/demo-4.png)
-
-10. **Filter** 'Notebook' and then **click** on the notebook '03 Silver to Gold layer_ Medallion Architecture'
-
-	![Close the browser.](media/notebook-16.png)
-
-11. **Click** on the 'Run all' button.
-
-	![Close the browser.](media/notebook-17.png)
-
-### Task 6: Creating Internal Shortcut
+<!-- ### Task 6: Creating Internal Shortcut
 
 >**Note:** In this task we are creating Internal Shortcut in lakehouse 'Silver To Gold'
 
@@ -785,11 +768,11 @@ step 28, and **click** on the 'Next' button.
 
 
 >**Note:** Once you are done with Task 6 please go back to Task 5 and follow the steps from the point where you had stopped.
+ -->
 
+### Task 4: KQL DB and QuerySet creation
 
-### Task 7: KQL DB and QuerySet creation
-
-1. In Power BI service click 'Workspaces' and **click** current working workspace. 
+<!-- 1. In Power BI service click 'Workspaces' and **click** current working workspace. 
 
 	![Close the browser.](media/power-bi-5.png)
 
@@ -849,40 +832,103 @@ step 28, and **click** on the 'Next' button.
 14. Once **click** Summary button, it will show the message as 'Continuous ingestion from Event Hubs established'. **Click** 'Close' button.
 
     ![Close the browser.](media/demo-42.png)
+ -->
 
-15. To verify the data tree **expand** the Thermostat table, check the size and the table details.
+1. In Power BI service click 'Workspaces' and **click** current working workspace. 
+
+	![Close the browser.](media/power-bi-5.png)
+
+2. **Filter** for the **Eventstream** and Click on **ThermostatEventStream_...**.
+
+	![Close the browser.](media/thermostat1.png)
+
+3. Click on **Use custom endpoint**.
+
+	![](media/thermostat2.png)
+
+4. Paste **Thermostat** in the Source name and click on **Add**.
+
+	![](media/thermostat3.png)
+
+5. Click on **Transform events or add destination** and then click on **Eventhouse**.
+
+	![](media/thermostat4.png)
+
+6. For **Data ingestion mode**, select **Event processing before ingestion**, paste **Eventhouse** for the **Destination name** field, select the current workspace from the drop down for **Workspace** field, select the **Contoso-Eventhouse** from the drop down for **Eventhouse** field, select the **Contoso-Eventhouse** from the drop down for **KQL Database** field, For **KQL Destination table** field - click on **Create new** and then paste **Thermostat** in the **Table name** field and then click on **Done**.
+
+	![](media/thermostat5.png)
+
+7. Click on **Save**.
+
+	![](media/thermostat6.png)
+
+8. Click on **Publish**.
+
+	![](media/thermostat7.png)
+
+9.  Click on three ellips of **Thermostat** endpoint , click on **SAS KeyAuthentication** and then copy the values of **Event hub name**, **Connection string-primary key**, store it in notepad for next step.
+
+	![](media/thermostat8.png)
+
+10. In Power BI service click 'Workspaces' and **click** current working workspace. 
+
+	![Close the browser.](media/power-bi-5.png)
+
+11. **Filter** for the **Notebook** and Click on **Generate realtime thermostat data**.
+
+	![Close the browser.](media/thermostat9.png)
+
+12. Go to the last cell and replace **#Connection string-primary key#**, **#Event hub name#** with the values copied in step 9.
+
+	![](media/thermostat10.png)
+
+13. Click on **Run all**.
+
+	![](media/thermostat11.png)
+
+   **📝 Note:** The above Notebook will generate only 100 records per run, if you want more data please schedule the notebook accordingly.
+
+![](media/thermostat14.png)
+
+![](media/thermostat13.png)
+
+14. **click** current working workspace, **Filter** for the **Eventhouse** and click on **Contoso-Eventhouse**.
+
+	![Close the browser.](media/thermostat12.png)
+
+15. To verify the data tree. **Expand** the Thermostat table, check the table details.
 
     ![Close the browser.](media/demo-43.png)
 
-16. **Click** 'Contoso-KQL-DB' and  **wait** for sometime to load the data. **Check** the table size.
+16. **Click** 'Contoso-Eventhouse' and  **wait** for sometime to load the data. **Check** the table size.
 
-	![Close the browser.](media/demo-44.png)
+	![Close the browser.](media/kqlqueryset04.png)
 
-17. Once you see the table size is increased then, **click** 'Explore your data' button. 
+17. Once you see the table size is increased then, click on **Query with code** button. 
 
-	![Close the browser.](media/demo-45.png)
+	![Close the browser.](media/kqlqueryset03.png)
 
 18. It will open the KQL queryset editor. **Click** link [KQL Queryset Scripts](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/tree/microsoftfabric2.0/fabric/artifacts/kqlscripts). **Copy** and **paste** the script in the editor and **click** 'Run' button.
 
 	![Close the browser.](media/demo-46.png)
 
-19. To create a Query Set **go to** current Workspace, **click** '+ New' and **click** 'More options' button.
+19. To create a Query Set **go to** current Workspace, click on **+ New iteam** and search for **KQl** and click on **KQL Queryset**.
 
-	![Close the browser.](media/demo-5.png)
+	![Close the browser.](media/kqlqueryset01.png)
 
-20. In the new window, **scroll down** to 'Real-Time Analytics' section and **click** 'KQL Queryset'.
-
-	![Close the browser.](media/demo-47.png)
-
-21. **Enter** the name as "01 Query Thermostat Data in Near 'Real-Time' using KQL Script", **click** 'Create' button and **wait** for the Queryset to get created.
+20. **Enter** the name as "01 Query Thermostat Data in Near 'Real-Time' using KQL Script", **click** 'Create' button and **wait** for the Queryset to get created.
 
 	![Close the browser.](media/demo-48.png)
 
-22. **Select** the database 'Contoso-KQL-DB' and **click** 'Select' button.
+21. Click on **Add data source** and then select **Eventhouse/KQL Databse**.
+
+	![Close the browser.](media/kqlqueryset02.png)
+
+22. **Select** the database 'Contoso-Eventhouse' and **click** 'Select' button.
 
 	![Close the browser.](media/demo-49.png)
 
-23. Now this will open the Queryset editor. **Copy** the queries from step 20 and **paste** it to queryset editor. **Select** the query and **click** 'Run' button.
+23. Now this will open the Queryset editor. **Copy** the queries from step 1 to step 10 from link [KQL Queryset Scripts](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/tree/microsoftfabric2.0/fabric/artifacts/kqlscripts) and **paste** it to queryset editor. **Select** the query and **click** 'Run' button.
 
 	![Close the browser.](media/demo-50.png)
 
@@ -902,76 +948,66 @@ step 28, and **click** on the 'Next' button.
 
     ![Kql](media/select-cont.png)
 
-28. **Navigate** to the 'OnlineShoppingData' folder and **click** on 'Behaviour.csv'
-     
-	 ![kqldb](media/kqlcsv.png)
+28. **Click** on **OnlineShoppingData** folder and then Scroll to the right, click on three dots(ellipsiss) of **OnlineBehaviour.csv** , and then click on **Generate SAS**.
 
-29. **Click** on 'Copy to clickboard' icon and
-    **copy** it in a notepad for further use.
-    
-	![kqldb](media/csvurl.png)
+![eventhub](media/eventhousegetdata11.1.png)
 
-30. **Navigate back** to Power BI workspace i.e. the powerbi tab which we working earlier.
+29. Scroll down and click on **Generate SAS Token and URL**, Copy the **Blob SAS URL**.
 
-31. **Enter** table name as 'Behaviour' and **Paste** the URL that you've copied earlier in 'URI' field. **click** on Next.
+![eventhub](media/eventhousegetdata12.png)
 
-    ![kqldb](media/uripaste1.png)
+30. Go back to the **Fabric** tab, Click on **+ New table** , Paste **Behaviour** , disable **Continuous ingestion**, select **Use a SAS URL to ingest from a storage account** ,paste the URL in the **Enter SAS URL** section and click on **ADD** icon and then click on **Next** button.
 
-32. On Inspect tab, ensure that the data format is selected as 'CSV' and **click** Next:Summary button.
-    
-	![kqldb](media/inspect.png)
+![eventhub](media/eventhousegetdata13.png)
 
-33.  Once **click** Summary button, it will show the message as '1 blob succeeded'. **Click** 'Close' button.
+31. Click on **Finish** button.
 
-   ![kqldb](media/blobinges.png)
+![eventhub](media/eventhousegetdata15.png)
 
-34. **Repeat** the steps (25-32) for other 'CSVs' under 'OnlineShoppingData' folder to ingest data into KQL-DB. Use 'CSVs' name as table name in KQL-DB.
+32. Click on **Close** button.
 
-35. In the KQL-DB **click** on 'Get data' and then **click** 'Azure Storage'.
+![eventhub](media/eventhousegetdata16.png)
 
-    ![kqldb](media/azstg.png)
+33. **Repeat** the steps (24-32) for other 'CSVs' under **OnlineShoppingData** folder to ingest data into KQL-DB. Use 'CSVs' name as table name in KQL-DB.
 
-36. Navigate back to the Azure portal and **open** the resource group and **Search** for 'storage account', **click** the storage account resource.
+34. In the KQL-DB **click** on 'Get data'.
 
-   ![kqldb](media/demo-10.png)
+    ![kqldb](media/azstrg01.png)
 
-37. **open** 'kqldata' container and navigate to 'kqldata' 
+35.  Click on **Azure Storage**.
 
-  ![Kql](media/select-cont.png)
+    ![kqldb](media/azstrg02.png)
 
-38. **Select** properties from left-handside of the menu and **copy** the URL.
+36. Enter table name as **OccupancyHistoricalData**,disable **Continuous ingestion**, select **Connect to a storage account** ,Choose the appropriate **Subscription** , **Storage** and select **kqldata** as container from the list and then **Expand** File filters(optional).
 
-   ![Kql](media/kql-db-1.png)
+![eventhub](media/azstrg03.png)
 
-39. **Navigate back** to Power BI workspace i.e. the powerbi tab which we working earlier. **Enter** table name as 'OccupancyHistoricalData' and **Paste** the URL that you've copied earlier in 'URI' field.
-   
-   ![Kql](media/kql-db-2.png)
+37. In the **File filters(optional)** dropdown enter Folder path as **OccupancyHistoricalData** and File extension as **csv**. Click on Next.
 
-40. In the 'File filters' dropdown **Enter** Folder path as 'OccupancyHistoricalData' and File extension as 'csv'. **Click** on Next.
+![eventhub](media/azstrg04.png)
 
-   ![Kql](media/kql-db-3.png)
+38. On Inspect tab, ensure that the data format is selected as **CSV** and Click on **Finish** button.
 
-41. On Inspect tab, ensure that the data format is selected as 'CSV' and **click** Next:Summary button.
+![eventhub](media/azstrg05.png)
 
-   ![Kql](media/kql-db-4.png)
+39. Click on Summary button, it will show the message as **7 blob succeeded** and Click on **Close** button.
 
-42. **click** on Summary button, it will show the message as '7 blob succeeded'. **Click** 'Close' button.
+![eventhub](media/azstrg06.png) 
 
-   ![Kql](media/kql-db-5.png)
+>**Note:** **repeat** the steps (34-39) for Ingesting data from **ThermostatHistoricalData**, In **Step 36** Enter table name as **ThermostatHistoricalData** , In **Step 37** for the **File filters(optional)** dropdown enter Folder path as **ThermostatHistoricalData**.
 
->**Note:** **repeat** the steps (35-42) for Ingesting data from 'ThermostatHistoricalData'.
+40. To create a Query Set **go to** current Workspace, click on **+ New iteam** and search for **KQl** and click on **KQL Queryset**.
 
-43. To create a Query Set **go to** current Workspace, **click** '+ New' and **click** 'More options' button.
+	![Close the browser.](media/kqlqueryset01.png)
 
-	![Close the browser.](media/demo-5.png)
-
-44. In the new window, **scroll down** to 'Real-Time Analytics' section and **click** 'KQL Queryset'.
-
-	![Close the browser.](media/demo-47.png)
-
-45. **Enter** the name as "Analyze_Consumers_E-commerce_Website_Purchasing_Behaviour", **click** 'Create' button and **wait** for the Queryset to get created.
+41. **Enter** the name as **Analyze_Consumers_E-commerce_Website_Purchasing_Behaviour**, **click** 'Create' button and **wait** for the Queryset to get created.
 
 	![Close the browser.](media/demo_48.png)
+
+42. Click on **Add data source** and then select **Eventhouse/KQL Databse**.
+
+	![Close the browser.](media/kqlqueryset02.png)
+
 
 46. **Select** the database 'Contoso-KQL-DB' and **click** 'Select' button.
 
@@ -982,7 +1018,7 @@ step 28, and **click** on the 'Next' button.
      ![Close the browser.](media/kql-db-6.png)
 
 
-### Task 8: Enabling Data Activator
+### Task 5: Enabling Data Activator
 
 1. **Click** on workspace and **select** contosoSales.
 
@@ -992,13 +1028,13 @@ step 28, and **click** on the 'Next' button.
 
 	![Close the browser.](media/data-activator-2.png)
 
-3. In the KQL Database screen **click** on the three dots in front of the Thermostat table and **select** 'Build PowerBI report'.
+3. In the KQL Database screen **click** on the three dots in front of the Thermostat table and select **PowerBI**.
 
-	![Close the browser.](media/data-activator-3.png)
+	![Close the browser.](media/data-activator-3.1.png)
 
 4. **Select** 'Area chart', **expand** 'Kusto Query Result', **select** 'ExnquedTimeUTC' and 'Sum of Temp' in the 'X-axis' and 'Y-axis' respectively and you would notice a chart as shown in the screenshot.
 
-	![Close the browser.](media/data-activator-4.png)
+	![Close the browser.](media/data-activator-4.1.1.png)
 
 5. **Click** on the 'expand' icon of the Sum of Temp and **select** 'Average'.
 
@@ -1020,30 +1056,35 @@ step 28, and **click** on the 'Next' button.
 
 	![Close the browser.](media/data-activator-8.png)
 
-10. **Click** on the three dots at right corner of the KPI and **select** 'Set Alert'.
+10. **Click** on the **Set alert**.
 
-	![Close the browser.](media/data-activator-9.png)
+	![Close the browser.](media/data-activator-9.1.png)
 
-11. **Enter** a 'Threshold' value to the nearest whole number of the default value.
+11. Click on **Average of Temp Alert**.
 
-	![Close the browser.](media/data-activator-10.png)
+	![Close the browser.](media/act1.png)
 
-12. **Scroll down**, **select** the 'Teams' radio button, **select** the current workspace, and then **expand** the 'Item' field and finally **click** on '+ Create a new reflex item'.
+12. Select the radio button for **Becomes**.  
+    In the **Condition** field drop-down, select **Greater than**.  
+    In the **Value** field, paste **68.00**.  
+    Select **Teams** in **Send Notification**, and then click on **Apply**.
 
-	![Close the browser.](media/data-activator-11.png)
+	![Close the browser.](media/act2.png)
 
-13. **Enter** the 'Item name' as 'Store Analytics' and **click** on the 'Create alert' button.
+13. Click on **My Power BI Activator Alerts**.  
+    Select the appropriate **Workspace**.  
+    In the **Item** field, select **Create a new activator item**.  
+    Enter the **Item Name** as **Store Analytics**.  
+    Click on the **Confirm** button.
 
-	![Close the browser.](media/data-activator-12.png)
+	![Close the browser.](media/act3.png)
 
 
-
-
-### Task 9 : Creating Semantic Model for PowerBI Copilot
+### Task 6: Creating Semantic Model for PowerBI Copilot
 
 1.	**Click** on the 'Workspace' icon and **select** the 'contosoSales' workspace.
 
-    ![01](media/data-activator-4.png)
+![Close the browser.](media/data-activator-1.png)
 
 2.	**Filter** 'Lakehouse'.
     
@@ -1067,7 +1108,7 @@ step 28, and **click** on the 'Next' button.
 
 This section is optional and created to showcase other data ingestion options. Use it as a refrence if you have your own Dataverse and Snowflake connections.
 
-### Setting up the Lakehouse
+<!-- ### Setting up the Lakehouse
 
 1. **Open** Power BI in a new tab by clicking [HERE](https://app.powerbi.com/).
 
@@ -1139,7 +1180,7 @@ This section is optional and created to showcase other data ingestion options. U
 
 21. **Click** on the 'Create' button.
 
-	![Close the browser.](media/demo-12.3.png)
+	![Close the browser.](media/demo-12.3.png) -->
 
 ### Creating Pipelines and Dataflows
 
