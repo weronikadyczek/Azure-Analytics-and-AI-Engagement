@@ -72,7 +72,7 @@ Customers can play, get hands-on experience navigating through the demo environm
 
 	![Sign in to Power BI.](media/power-bi.png)
 
-	> **Note:** Use your Azure Active Directory credentials to login to Power BI.
+> **Note:** Use your Azure Active Directory credentials to login to Power BI.
 
 3. In Power BI service, **click** on **Workspaces**.
 
@@ -96,7 +96,7 @@ Customers can play, get hands-on experience navigating through the demo environm
 
 	![Give the name and description for the new workspace.](media/power-bi-3.png)
 
-	> **Note:** This workspace ID will be used during powershell script execution.
+> **Note:** This workspace ID will be used during powershell script execution.
 
 8. In the workspace, **click** the **three dots (Ellipsis)** and **select** the **Workspace settings**.
 
@@ -198,7 +198,7 @@ Customers can play, get hands-on experience navigating through the demo environm
 
 	![Mount a Storage for running the Cloud Shell.](media/cloud-shell-2.png)
 
-	> **Note:** If you already have a storage mounted for Cloud Shell, you will not get this prompt. In that case, skip step 5 and 6.
+> **Note:** If you already have a storage mounted for Cloud Shell, you will not get this prompt. In that case, skip step 5 and 6.
 
 5. **Select** your **Subscription**, **Cloud Shell region** and **Resource Group**.
 
@@ -210,17 +210,17 @@ Customers can play, get hands-on experience navigating through the demo environm
 
 	![Mount a storage for running the Cloud Shell and Enter the Details.](media/cloud-shell-3.png)
 
-	> **Note:** If you are creating a new storage account, give it a unique name with no special characters or uppercase letters. The entire name should be all lowercase with no more than 24 characters.
+> **Note:** If you are creating a new storage account, give it a unique name with no special characters or uppercase letters. The entire name should be all lowercase with no more than 24 characters.
 
-	> It is not mandatory for storage account and file share name to be same.
+> It is not mandatory for storage account and file share name to be same.
 
 7. In the Azure Cloud Shell window, ensure that the **PowerShell** environment is selected.
 
 	![Git Clone Command to Pull Down the demo Repository.](media/cloud-shell-3.1.png)
 
-	>**Note:** All the cmdlets used in the script work best in Powershell.	
+>**Note:** All the cmdlets used in the script work best in Powershell.	
 
-	>**Note:** Please use 'Ctrl+C' to copy is and 'Shift+Insert' to paste, as 'Ctrl+V' is NOT supported by Cloudshell.
+>**Note:** Please use 'Ctrl+C' to copy is and 'Shift+Insert' to paste, as 'Ctrl+V' is NOT supported by Cloudshell.
 
 8. Enter the following command to clone the repository files in cloudshell.
 
@@ -235,13 +235,16 @@ git clone --branch microsoftfabric2.0 --single-branch https://daidemos@dev.azure
 
    ![Git Clone Command to Pull Down the demo Repository.](media/cloud-shell-4.5.png)
 	
-   > **Note:** If you get File already exist error, please execute the following command to delete existing clone and then reclone:
+> **Note:** If you get File already exist error, please execute the following command to delete existing clone and then reclone:
+
 ```
  rm fabric -r -f 
 ```
-   > **Note**: When executing scripts, it is important to let them run to completion. Some tasks may take longer than others to run. When a script completes execution, you will be returned to a command prompt. 
+
+> **Note**: When executing scripts, it is important to let them run to completion. Some tasks may take longer than others to run. When a script completes execution, you will be returned to a command prompt. 
 
 9. **Execute** the Powershell script with the following command:
+
 ```
 cd ./fabric/fabric
 ```
@@ -251,6 +254,7 @@ cd ./fabric/fabric
 ```
     
    ![Commands to run the PowerShell Script.](media/cloud-shell-5.1.png)
+
 
 10. **Press** **Y** and click on **Enter** button.
       
@@ -329,7 +333,7 @@ cd ./fabric/fabric
 
 29. You will get another code to authenticate the Azure PowerShell script for creating reports in Power BI. **Copy** the code.
 
-	> **Note:** You may see errors in script execution if you  do not have necessary permissions for cloudshell to manipulate your Power BI workspace. In that case, follow this document [Power BI Embedding](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/fsi/fsidemo/Power%20BI%20Embedding.md) to get the necessary permissions assigned. You’ll have to manually upload the reports to your Power BI workspace by downloading them from this location [Reports](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/tree/fintax/fintaxdemo/artifacts/reports). 
+> **Note:** You may see errors in script execution if you  do not have necessary permissions for cloudshell to manipulate your Power BI workspace. In that case, follow this document [Power BI Embedding](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/fsi/fsidemo/Power%20BI%20Embedding.md) to get the necessary permissions assigned. You’ll have to manually upload the reports to your Power BI workspace by downloading them from this location [Reports](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/tree/fintax/fintaxdemo/artifacts/reports). 
 
 30. **Click** the link [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).
 
@@ -339,7 +343,7 @@ cd ./fabric/fabric
 
 ![box](media/cloud-shell-17.png) 
 
-	> **Note:** Be sure to provide the device code before it expires and let the script run until completion.
+> **Note:** Be sure to provide the device code before it expires and let the script run until completion.
 
 32. **Select** the user account you used to log into the Azure Portal in [Task 1](#task-1-create-a-resource-group-in-azure). 
 
@@ -353,7 +357,7 @@ cd ./fabric/fabric
 
 	![box](media/cloud-shell-9.png)
 
-	>**Note:** During script execution you need to note the resource group which gets created, since a resource group with unique suffix is created each time the script is executed.
+>**Note:** During script execution you need to note the resource group which gets created, since a resource group with unique suffix is created each time the script is executed.
 
 35. **Navigate back** to your Azure Cloud Shell execution window.
 
@@ -369,7 +373,7 @@ cd ./fabric/fabric
 
 ![](media/externalshortcut.png)
 
-	> **Note:** Deployment will take approximately 20-30 minutes to complete. Keep checking the progress with messages printed in the console to avoid timeout.
+> **Note:** Deployment will take approximately 20-30 minutes to complete. Keep checking the progress with messages printed in the console to avoid timeout.
 
 39. After  script execution is complete, the "--Execution Complete--" prompt appears.
 <!-- 	
@@ -377,7 +381,7 @@ cd ./fabric/fabric
 
 	![Close the browser.](media/demo-1.1.png)
 
-	>**Note:** The resource group name starts with 'fabric-dpoc-' with a random unique suffix in the end.
+>**Note:** The resource group name starts with 'fabric-dpoc-' with a random unique suffix in the end.
 
 41. In the search pane of the resource group, **type** "app-realtime-kpi-analytics..." and **select** the resource.
 
