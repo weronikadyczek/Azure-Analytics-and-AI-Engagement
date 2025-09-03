@@ -1,0 +1,1 @@
+azcopy copy --recursive "https://zavapublicdemodata.blob.core.windows.net/digitaltwin/RawData/" ./
