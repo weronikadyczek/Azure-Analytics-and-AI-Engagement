@@ -580,7 +580,7 @@ Let's alter the stored procedure to create a new flow that not only uses vector 
 
     AS
 
-    declare @url nvarchar(4000) = N'https://AI_ENDPOINT_SERVERNAME.openai.azure.com/openai/deployments/gpt-4/chat/completions?api-version=2024-06-01';
+    declare @url nvarchar(4000) = N'https://AI_ENDPOINT_SERVERNAME.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-06-01';
     declare @payload nvarchar(max) = N'{
         "messages": [
             {
@@ -781,4 +781,4 @@ Let's alter the stored procedure to create a new flow that not only uses vector 
         }
     }
     ```
-In this demo, you would have learned how to build a RAG application using SQL database in fabric, and Azure OpenAI. You explored generating vector embeddings for relational data, performing semantic similarity searches with SQL, and integrating natural language responses via GPT-4.
+In this demo, you would have learned how to build a RAG application using SQL database in fabric, and Azure OpenAI. You explored generating vector embeddings for relational data, performing semantic similarity searches with SQL, and integrating natural language responses via GPT-4.1.
