@@ -102,7 +102,7 @@ This module covers the basics of getting started with SQL database in Fabric. Yo
 
 In this module, you will explore the seamless integration between your SQL database and other artifacts within your Fabric workspace. 
 
-### 3. [Use Copilot with SQL queries](/sqldev/03%20-%20Use%20Copilot%20with%20SQL%20queries/03%20-%20Use%20Copilot%20with%20SQL%20queries.md)
+### 3. [Use Copilot with SQL queries](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/FabCon-Vienna-SQL-database-in-Fabric-Workshop/sqldev/03%20-%20Copilot%20capabilities%20for%20SQL%20database%20in%20Microsoft%20Fabric/03%20-%20Copilot%20capabilities%20for%20SQL%20database%20in%20Microsoft%20Fabric.md)
 
 This module focuses copilot capability of SQL database.
 
