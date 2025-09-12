@@ -114,7 +114,7 @@ This module introduces the GraphQL API Builder in Fabric SQL and walks you throu
 
 This section explores how to implement Retrieval-Augmented Generation (RAG) using Azure OpenAI and vector-based search. RAG is a powerful architecture that enhances the capabilities of large language models by grounding their responses in external knowledge sources.
 
-### 6. [Creating a Power BI Report from a SQL Database in Microsoft Fabric with Copilot](https://github.com/sukkaur/SQLdatabaseinFabricWorkshop_App_Dev_6_27_25/blob/main/sqldev/06%20-%20PowerBI%20report%20using%20semantic%20model/06.%20PowerBI%20report%20using%20semantic%20model.md)
+### 6. [Creating a Power BI Report from a SQL Database in Microsoft Fabric with Copilot](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/FabCon-Vienna-SQL-database-in-Fabric-Workshop/sqldev/06%20-%20PowerBI%20report%20using%20semantic%20model/06.%20Build%20PowerBI%20reports%20using%20copilot.md)
 
 In this module, you will learn how to create reports in Power BI using a SQL database in Microsoft Fabric with the help of Copilot
 
