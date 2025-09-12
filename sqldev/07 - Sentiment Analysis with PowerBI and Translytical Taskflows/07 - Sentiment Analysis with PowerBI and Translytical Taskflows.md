@@ -684,7 +684,7 @@ This will call our User data function and will enter our text into the dbo.produ
 
 ![](../../media/module11_database43.png)
 
-Congratulations! You have learned how to leverage **Sentiment Analysis with Power BI and Translytical Taskflows**. You are ready to move on to the next exercise: [Exercise 7: Continuous integration and deployments in Fabric](../08%20-%20ALM%20-%20Github%20Source%20Control/08%20-%20ALM%20-%20Github%20Source%20Control.md)
+Congratulations! You have learned how to leverage **Sentiment Analysis with Power BI and Translytical Taskflows**. You are ready to move on to the next exercise: [Exercise 8: Continuous integration and deployments in Fabric](../08%20-%20ALM%20-%20Github%20Source%20Control/08%20-%20ALM%20-%20Github%20Source%20Control.md)
 
 
 
