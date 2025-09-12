@@ -1,80 +1,142 @@
-<h1 align="center">
-  <br/>
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/"><img src="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/main/Manufacturing/media/DPoC_Cover.png" alt="Dream PoC Accelerator" width="1200" /></a>
-</h1>
+![](https://raw.githubusercontent.com/microsoft/sqlworkshops/master/graphics/microsoftlogo.png)
+# Workshop: SQL database in Microsoft Fabric
+
+## Overview
+
+#### A Microsoft Workshop from the SQL Server Team
+
+Welcome to the *SQL database in Microsoft Fabric* workshop. This workshop is designed to provide you with a comprehensive understanding of SQL database in Microsoft Fabric and its integration with other services. Throughout this workshop, you will learn how to create, manage, and optimize SQL databases, as well as how to leverage artificial intelligence and build applications using GraphQL API builder.
 
 
-<div align="center">
-  <a href="#D">All</a> •
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/microsoftfabric2.0/fabric/Readme-shell.md">Microsoft Fabric</a> •
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/fsi/fsidemo/Readme-shell.md">FSI</a> •
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/fintax/fintaxdemo/Readme-shell.md">Public Finance</a> •
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/retail2.0/retail/Readme-shell.md">Retail</a> •
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/healthcare2/healthcare2/Readme-shell.md">Healthcare</a> •
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/main/Manufacturing/Readme-shell.md">Manufacturing</a> •
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/media/mediademo/Readme-shell.md">Media</a> •
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/midp-with-cosmos/midpCosmos/Readme-shell.md">MIDP</a> •
-  <a href="https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/ignite-lab/ignite/Readme-Shell.md">Ignite Lab</a>
-</div>
+## Introduction to SQL Database in Fabric
 
-<br>
+### Understanding SQL Database in Fabric
 
-<div align="center">
-<b>Important Links:</b>
-  <br>
-  • <a href="https://partner.microsoft.com/en-us/asset/collection/industry-dream-demos-and-dream-demo-in-a-box#/">Data & AI Industry DREAM Demos & DREAM PoC Accelerator</a>
-</div>
+**SQL database** in Microsoft Fabric is a developer-friendly transactional database, based on **Azure SQL Database**, that allows you to easily create your operational database in Microsoft Fabric. A SQL database in Microsoft Fabric uses the same SQL Database Engine as Azure SQL Database.
 
-<br/>
+SQL database in Fabric is:
 
-# Getting Started
+- The home in Fabric for OLTP workloads
+- Easy to configure and manage
+- Set up for analytics by automatically replicating the data into OneLake in near real time
+- Integrated with development frameworks and analytics
+- Based on the underlying technology of **Mirroring in Fabric**
+- Queried in all the same ways as **Azure SQL Database**, plus a **web-based editor in the Fabric portal**
+
+### Key Benefits of Using SQL Database in Fabric
+SQL database in Microsoft Fabric is a developer-friendly transactional database based on the Azure SQL Database engine. It is simple, autonomous, secure by default, and AI-integrated. Being part of Microsoft Fabric, it benefits from Fabric's promises and offers tight integration with other workloads within Microsoft Fabric.
+
+![](media/f1.png)
+
+With your SQL database in Fabric, you can easily build OLTP applications while minimizing the need to stitch together multiple services to create an end-to-end solution.
+
+When you provision a SQL database, the data is stored in MDF and LDF formats. The data is then automatically replicated into OneLake and converted to Parquet, in an analytics-ready format. This enables downstream scenarios like Data Engineering, Data Science, and more.
 
 
-DREAM PoC Accelerators (DPoC) are packaged Industry Scenario DREAM Demos with ARM templates (Containing a demo web application, Power BI reports, Synapse resources, AML Notebooks etc.) that can be deployed in a customer’s subscription using the CAPE tool within a matter of few hours. Partners can also deploy DREAM Demos in their own subscriptions using DPoC.
+#### Sharing
+ 
+Sharing enables ease of access control and management, while security controls like row-level security (RLS), object-level security (OLS) and more make sure you can control access to sensitive information. Sharing also enables secure and democratized decision-making across your organization.
+ 
+By sharing your SQL database, you can grant other users or a group of users, access to a database without giving access to the workspace and the rest of its items. When someone shares a database, they also grant access to the SQL analytics endpoint and associated default semantic model.
+ 
+#### Connect
+ 
+Like other Microsoft Fabric item types, SQL databases rely on Microsoft Entra authentication.
+To successfully authenticate to a SQL database, a Microsoft Entra user, a service principal, or their group, must have the Read item permission to the SQL database in Fabric.
+ 
+![](media/04.png)
 
- ## Objective & Intent
-With the DPoC solution, partners can also deploy DREAM Demos within their own subscriptions. 
-Partnering with Microsoft sellers, partners can deploy the Iindustry scenario DREAM demos into customer subscriptions. Customers can play, get hands-on experience navigating through the demo environment in their own subscription and demonstrate demo to their own stakeholders.
+In addition to the Fabric SQL database Query Editor, you can also connect your Fabric SQL database to your preferred client tools, including SQL Server Management Studio and the mssql extension with Visual Studio Code. 
+ 
+#### Cross-database queries
+ 
+With the data from your SQL database automatically stored in OneLake, you can write cross-database queries, joining data from other SQL databases, mirrored databases, warehouses, and the SQL analytics endpoint in a single T-SQL query. All this is currently possible with queries on the SQL analytics endpoint of the SQL database, or lakehouse.
+ 
+#### Data Engineering with your SQL database in Fabric
+ 
+Microsoft Fabric provides various data engineering capabilities to ensure that your data is easily accessible, well-organized, and high-quality. With Microsoft Fabric Data Engineering, you can:
+ 
+- Create and manage your data as Spark using a SQL database in Fabric.
+- Design pipelines to copy data into your SQL database in Fabric.
+- Use Spark job definitions to submit batch/streaming jobs to Spark cluster.
+- Use notebooks to write code for data preparation and transformation.
+ 
+#### Data Science with your SQL database in Fabric
+ 
+Data Science in Microsoft Fabric empowers users to complete end-to-end data science workflows for the purpose of data enrichment and business insights. You can complete a wide range of activities across the entire data science process, all the way from data exploration, preparation and cleansing to experimentation, modeling, model scoring and serving of predictive insights to BI reports.
+ 
+#### Database portability and deployments with SqlPackage
+ 
+SqlPackage is a cross-platform command line tool that enables database interactions that move entire databases or database objects. The portability (import/export) of a database managed in Azure or in `Fabric ensures that your data is portable should you want to migrate later on. The same portability also enables certain migration scenarios through self-contained database copies (.bacpac) with import/export operations.
+ 
+SqlPackage can enable easy database deployments of incremental changes to database objects (new columns in tables, alterations to existing stored procedures, etc.). SqlPackage can extract a .dacpac file containing the definitions of objects in a database, and publish a .dacpac file to apply that object state to a new or existing database. The publish operation also integrates with SQL projects, which enables offline and more dynamic development cycles for SQL databases.
+ 
+#### Integration with Fabric source control
+SQL database is integrated with [Fabric continuous integration/continuous development](https://learn.microsoft.com/fabric/cicd/cicd-overview). You can use the built-in git repository to manage your SQL database.
+ 
+#### Create GraphQL API from Fabric portal
+ 
+You can use the Microsoft Fabric portal to easily [create a GraphQL API](https://learn.microsoft.com/fabric/database/sql/graphql-api) for your SQL database.
+ 
+#### Capacity management
+ 
+You can use the [Microsoft Fabric Capacity Metrics app](https://learn.microsoft.com/fabric/enterprise/metrics-app) to monitor the SQL database usage and consumption in non-trial Fabric capacities.
+ 
+#### Mirroring for Azure SQL Database
+ 
+Do you already have an external database and want to leverage Fabric's integration? You can use Mirroring in Fabric as a low-cost and low-latency solution to bring data from various systems together. You can continuously replicate your existing data estate directly into Fabric's OneLake, including data from an existing [Azure SQL Database](https://learn.microsoft.com/fabric/database/mirrored-database/azure-sql-database).
 
- ## :exclamation:IMPORTANT NOTES:  
 
-  1. Prior to proceeding, **please read the [license agreement](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/main/CDP-Retail/license.md) and [disclaimer](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/main/CDP-Retail/disclaimer.md), as your access to and use of the code made available hereunder is subject to the terms and conditions made available therein.**
-  2. Without limiting the terms of the [license](https://github.com/microsoft/Azure-Analytics-and-AI-Engagement/blob/main/CDP-Retail/license.md) , any Partner distribution of the Software (whether directly or indirectly) may only be made through Microsoft’s Customer Acceleration Portal for Engagements (“CAPE”). CAPE is accessible by Microsoft employees. 
-  For more information about the CAPE process, please connect with your local Data & AI specialist or CSA/GBB.
-  3. •	It is important to note that **Azure hosting costs** are involved when DREAM PoC Accelerators are implemented in customer or partner Azure subscriptions. **Microsoft will not cover** the costs of DPoC hosting.
-  4. •	As a DPoC, certain resources are available to the public.**Please ensure proper security practices are followed before you add any sensitive data into the environment.** To strengthen the environment's security posture, **leverage Azure Security Centre.** 
-  5.  For any questions or comments please email **[dreamdemos@microsoft.com](mailto:dreamdemos@microsoft.com).**
+## Workshop Content
+The workshop is divided into several modules, each focusing on a specific aspect of SQL database in Microsoft Fabric. By the end of this workshop, you will have gained practical knowledge and hands-on experience in the following areas:
 
-# Disclaimer 
+### 0. [Pre-Requisites](/sqldev/00%20-%20Pre-Requisites/00%20-%20Pre-Requisites.md)
 
-This presentation, demonstration, and demonstration model are for informational purposes only and (1) are not subject to SOC 1 and SOC 2 compliance audits, and (2) are not designed, intended or made available as a medical device(s) or as a substitute for professional medical advice, diagnosis, treatment or judgment. Microsoft makes no warranties, express or implied, in this presentation, demonstration, and demonstration model. Nothing in this presentation, demonstration, or demonstration model modifies any of the terms and conditions of Microsoft’s written and signed agreements. This is not an offer and applicable terms and the information provided are subject to revision and may be changed at any time by Microsoft. 
+In this module, you will set up the necessary components and configurations required for the workshop. This includes setting up a PowerBI account, enabling Microsoft Fabric Tenant settings, and creating a Microsoft Azure account.
 
-This presentation, demonstration, and demonstration model do not give you or your organization any license to any patents, trademarks, copyrights, or other intellectual property covering the subject matter in this presentation, demonstration, and demonstration model. 
+### 1. [Getting Started](/sqldev/01%20-%20Getting%20Started/01%20-%20Getting%20Started.md)
 
-The information contained in this presentation, demonstration and demonstration model represents the current view of Microsoft on the issues discussed as of the date of presentation and/or demonstration, for the duration of your access to the demonstration model. Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information presented after the date of presentation and/or demonstration and for the duration of your access to the demonstration model.  
+This module covers the basics of getting started with SQL database in Fabric. You will learn how to create a database, and seed the database with initial data that will be used in later modules.
 
-No Microsoft technology, nor any of its component technologies, including the demonstration model, is intended or made available as a substitute for the professional advice, opinion, or judgment of (1) a certified financial services professional, or (2) a certified medical professional. Partners or customers are responsible for ensuring the regulatory compliance of any solution they build using Microsoft technologies. 
+### 2. [Introduction to SQL database in Fabric](/sqldev/02%20-%20Introduction%20to%20SQL%20database%20in%20Fabric/02%20-%20Introduction%20to%20SQL%20database%20in%20Fabric.md)
 
-# Copyright
+In this module, you will explore the seamless integration between your SQL database and other artifacts within your Fabric workspace. 
 
-© 2023 Microsoft Corporation. All rights reserved.   
+### 3. [Use Copilot with SQL queries](/sqldev/03%20-%20Use%20Copilot%20with%20SQL%20queries/03%20-%20Use%20Copilot%20with%20SQL%20queries.md)
 
-By using this demo/lab, you agree to the following terms: 
+This module focuses copilot capability of SQL database.
 
-The technology/functionality described in this demo/lab is provided by Microsoft Corporation for purposes of obtaining your feedback and to provide you with a learning experience. You may only use the demo/lab to evaluate such technology features and functionality and provide feedback to Microsoft.  You may not use it for any other purpose. You may not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell this demo/lab or any portion thereof. 
+### 4. [Introduction to GraphQL API builder](/sqldev/04%20-%20Introduction%20to%20GraphQL%20API%20builder//04%20-%20Introduction%20to%20GraphQL%20API%20builder.md)
 
-COPYING OR REPRODUCTION OF THE DEMO/LAB (OR ANY PORTION OF IT) TO ANY OTHER SERVER OR LOCATION FOR FURTHER REPRODUCTION OR REDISTRIBUTION IS EXPRESSLY PROHIBITED. 
+This module introduces the GraphQL API Builder in Fabric SQL and walks you through the process of creating and querying a GraphQL API. You'll learn how to expose data from your SQL tables, preview content, and define custom procedures to support dynamic queries. The examples provided will help you understand how to retrieve and filter product data using GraphQL.
 
-THIS DEMO/LAB PROVIDES CERTAIN SOFTWARE TECHNOLOGY/PRODUCT FEATURES AND FUNCTIONALITY, INCLUDING POTENTIAL NEW FEATURES AND CONCEPTS, IN A SIMULATED ENVIRONMENT WITHOUT COMPLEX SET-UP OR INSTALLATION FOR THE PURPOSE DESCRIBED ABOVE. THE TECHNOLOGY/CONCEPTS REPRESENTED IN THIS DEMO/LAB MAY NOT REPRESENT FULL FEATURE FUNCTIONALITY AND MAY NOT WORK THE WAY A FINAL VERSION MAY WORK. WE ALSO MAY NOT RELEASE A FINAL VERSION OF SUCH FEATURES OR CONCEPTS.  YOUR EXPERIENCE WITH USING SUCH FEATURES AND FUNCITONALITY IN A PHYSICAL ENVIRONMENT MAY ALSO BE DIFFERENT.  
+### 5. [RAG Implementation with Azure OpenAI](/sqldev/05%20-%20RAG%20Implementation%20with%20Azure%20OpenAI/05%20-%20RAG%20Implementation%20with%20Azure%20OpenAI.md)
 
-FEEDBACK.  
+This section explores how to implement Retrieval-Augmented Generation (RAG) using Azure OpenAI and vector-based search. RAG is a powerful architecture that enhances the capabilities of large language models by grounding their responses in external knowledge sources.
 
-If you give feedback about the technology features, functionality and/or concepts described in this demo/lab to Microsoft, you give to Microsoft, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. You also give to third parties, without charge, any patent rights needed for their products, technologies and services to use or interface with any specific parts of a Microsoft software or service that includes the feedback. You may not give feedback that is subject to a license that requires Microsoft to license its software or documentation to third parties because we include your feedback in them. These rights survive this agreement. 
+### 6. [Creating a Power BI Report from a SQL Database in Microsoft Fabric with Copilot](https://github.com/sukkaur/SQLdatabaseinFabricWorkshop_App_Dev_6_27_25/blob/main/sqldev/06%20-%20PowerBI%20report%20using%20semantic%20model/06.%20PowerBI%20report%20using%20semantic%20model.md)
 
-MICROSOFT CORPORATION HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH REGARD TO THE DEMO/LAB, INCLUDING ALL WARRANTIES AND CONDITIONS OF MERCHANTABILITY, WHETHER EXPRESS, IMPLIED OR STATUTORY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.  MICROSOFT DOES NOT MAKE ANY ASSURANCES OR REPRESENTATIONS WITH REGARD TO THE ACCURACY OF THE RESULTS, OUTPUT THAT DERIVES FROM USE OF DEMO/ LAB, OR SUITABILITY OF THE INFORMATION CONTAINED IN THE DEMO/LAB FOR ANY PURPOSE. 
+In this module, you will learn how to create reports in Power BI using a SQL database in Microsoft Fabric with the help of Copilot
+
+### 7. [Sentiment Analysis with PowerBI and Translytical Taskflows](/sqldev/07%20-%20Sentiment%20Analysis%20with%20PowerBI%20and%20Translytical%20Taskflows//07%20-%20Sentiment%20Analysis%20with%20PowerBI%20and%20Translytical%20Taskflows.md)
+
+In this exercise you will build on the examples from the previous exercise to **score for sentiment** user reviews of products for AdventureWorks.  You will then use Translytical Taskflows to create a **user data function**,**embed it within a Power BI report**, and **respond to the reviews** in order to determine if any actions or follow up is needed by you, the AdventureWorks employee, who owns the product.
+
+
+### 8. [ALM - Github Source Control](/sqldev/08%20-%20ALM%20-%20Github%20Source%20Control/08%20-%20ALM%20-%20Github%20Source%20Control.md)
+In this module, you will learn about managing the lifecycle of your application using source control. You will also learn how to monitor and maintain your SQL database in Fabric, including setting up Git integration, linking GitHub repositories to Azure DevOps, and synchronizing your workspace with the Git branch.
+
+### 9. [Security - Access Management](/sqldev/09%20-%20Security%20-%20Access%20Management/Data%20Security%20and%20Access%20Management.md)
+
+In this exercise, you will explore **Microsoft Fabric workspace roles** and **SQL native access controls** to effectively manage user permissions to drive down compliance alerts.
+
+### 10. [Monitor your SQL database](/sqldev/10%20-%20Monitor%20your%20SQL%20database/10%20-%20Monitor%20your%20SQL%20database.md)
+
+In this exercise, you will learn to monitor SQL database performance and CU usage.
 
  
-# Contributing
+
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
@@ -88,4 +150,19 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
+## Legal Notices
 
+### License
+Microsoft and any contributors grant you a license to the Microsoft documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), see [the LICENSE file](https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web/blob/master/LICENSE), and grant you a license to any code in the repository under [the MIT License](https://opensource.org/licenses/MIT), see the [LICENSE-CODE file](https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web/blob/master/LICENSE-CODE).
+
+Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
+may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
+The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
+Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+
+Privacy information can be found at https://privacy.microsoft.com/
+
+Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
+or trademarks, whether by implication, estoppel or otherwise.
+
+---
