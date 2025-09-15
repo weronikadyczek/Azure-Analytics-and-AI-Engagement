@@ -21,8 +21,10 @@ In this section of the workshop, you will be logging into the Microsoft Fabric P
 
 Using a web browser of your choice, please navigate to this [Microsoft Fabric link](https://app.fabric.microsoft.com/home).
 
-1. Enter your AAD Username in the Email field, then click on the Submit button.
-> **During the workshop, you should have received a printed one-pager from the proctor or speaker. Please enter or copy the AAD User from that page.**
+1. Enter your AAD Username **AIAP.<YourCustomUserName>@fabcon25eu.onmicrosoft.com** 
+  in the Email field, then click on the Submit button.
+>**During the workshop, you should have received a printed one-pager from the proctor or speaker. Replace <YourCustomUserName> with the value provided on that sheet. Then, enter or copy the AAD user from the page, for example: AIAP.user001@fabcon25eu.onmicrosoft.com**
+
 
 <img src="../../graphics/Introduction/Fabriclogin.png" alt="A picture of the Create a workspace blade on the right side of the page" style="width:400px;">
 
