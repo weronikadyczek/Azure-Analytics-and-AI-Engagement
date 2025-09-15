@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "UserDataFunction",
+    "displayName": "sqlwriteback"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7169ba57-0790-86d4-416a-5531ab910aed"
+  }
+}
