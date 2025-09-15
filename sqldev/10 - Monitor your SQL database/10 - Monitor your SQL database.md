@@ -25,18 +25,20 @@ You will now review the information in the Performance Dashboard on your system.
 2. On the right side of your window, the Performance Summary will open. This gives you a high-level overview of the database's current performance.
 3. At the bottom, you will see a green button that says **View performance dashboard**.  Click this to open the full dashboard experience.
 
-<img width="843" height="883" alt="image" src="https://github.com/user-attachments/assets/374b1411-5bc6-4470-828d-15f30799275b" />
+ ![](../../media/module10-2.png)
 
 
 You will notice that by default, the performance dashboard has selected the default time interval of the Past 24 hours.  By clicking the drop down on the top right next to **Time interval:**, you can select any time interval of interest.
 
 Scrolling to the bottom of this pane (below the chart) you can see a list of the **Top CPU consuming queries**.  You can click **View more queries ->** to see a complete list.
 
-<img width="1782" height="864" alt="image" src="https://github.com/user-attachments/assets/efd03c21-4129-45ea-9bd9-9daf60ed081a" />
+ ![](../../media/module10-3.png)
 
 
 From this view, you can select the `star` icon to favorite, or track, a query.  You can also click on the `Query ID` on the far left to see details about a given query.
-<img width="1775" height="630" alt="image" src="https://github.com/user-attachments/assets/444eeeb7-fa16-4bb1-b095-61c9dae8a9f9" />
+
+ ![](../../media/module10-4.png)
+
 
 
 ### 10.2 Track query details and see performance history
@@ -48,7 +50,7 @@ From this view, you can select the `star` icon to favorite, or track, a query.  
 3. You can also select **Compare Performance** to compare the query's performance across different time intervals.
 4. Once you have done this, feel free to play around with more queries, and then select **Performance dashboard** at the top of the screen in **Database editor \> Performance dashboard \> Queries \> ...**
 
-<img width="1736" height="916" alt="image" src="https://github.com/user-attachments/assets/7daca790-970e-44cd-baaf-751c6d231535" />
+ ![](../../media/module10-5.png)
 
 
 ### 10.3 Investigate User Connections on Performance Dashboard
@@ -58,19 +60,19 @@ From this view, you can select the `star` icon to favorite, or track, a query.  
 
 Use this information to troubleshoot if you have a connection leak in your application, or if you are creating more connections than expected.
 
-<img width="1783" height="825" alt="image" src="https://github.com/user-attachments/assets/d6751f57-472e-4564-b121-df4cf99d7323" />
+ ![](../../media/module10-6.png)
 
 ### 10.4 Learn About Alerts in Performance Dashboard
 
 Another performance feature in SQL database in Fabric is Alerts. These are automatically generated alerts with pre-set criteria that provide Ongoing Alerts, which are raised when the database is facing a problem. This alert is represented by a horizontal Notification bar. Another set of alerts are the Pending Alerts which are stored in the system, indicating that analysis is needed for a database parameter reaching a critical state.
 
-<img width="1234" height="713" alt="image" src="https://github.com/user-attachments/assets/89574bda-772e-49e3-b2ab-92f721bcfbb1" />
+ ![](../../media/module10-7.png)
 
 Once you select the link for an alert, the Performance Summary provides a summary of alerts and recent metrics of the database. From here, you can drill into the event timeline for more information.
 
 When the database reaches a critical state of CPU consumption (or any other factor which raises an alert), you can see Unhealthy points marked on the CPU consumption tab's graph, marking points where the CPU consumption has crossed the threshold value. The time interval is configurable and defaults to 24 hours.
 
-<img width="2888" height="1625" alt="image" src="https://github.com/user-attachments/assets/9c0ec0aa-84e7-45c1-8e7e-6cb94633afca" />
+ ![](../../media/module10-8.png)
 
 
 ### 10.5 Explore Performance Dashboard
