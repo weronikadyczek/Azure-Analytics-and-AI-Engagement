@@ -2,7 +2,7 @@
 
 # Getting Started
 
-In this workshop, you’ll get hands‑on with the SQL database in Microsoft Fabric. We'll begin by setting up a Fabric SQL database and loading sample data followed by trying out the Copilot-assisted querying (including NL2SQL). From there, you'll learn how to expose your data through APIs, connect seamlessly to applications, analytics and Power BI, and explore building Retrieval-Augmented Generat (RAG) application using SQL database in Microsoft Fabric.
+In this workshop, you’ll get hands‑on with the SQL database in Microsoft Fabric. We'll begin by setting up a Fabric SQL database and loading sample data followed by trying out the Copilot-assisted querying (including NL2SQL). From there, you'll learn how to expose your data through APIs, connect seamlessly to applications, analytics and Power BI, and explore building Retrieval-Augmented Generation (RAG) application using SQL database in Microsoft Fabric.
 
 Along the way, we’ll review practical considerations for application lifecycle management, performance monitoring, and security. The focus of this workshop is to understand how to design, build, and operationalize end-to-end AI-ready applications using SQL database in Fabric as the core data backbone.
 
@@ -22,10 +22,8 @@ In this workshop you'll learn:
 - How to implement ALM (Application Lifecycle Management) for Fabric SQL workloads  
 - How to secure your solution with authentication, authorization, and data protection best practices  
 - How to implement RAG (Retrieval-Augmented Generation) patterns to enhance AI responses with live SQL data  
-- How to integrate Power BI with Fabric SQL using Translytical Taskflows for real-time analytics  
-- How to use BCDR capabilities available in SQL database in Fabric  
+- How to integrate Power BI with Fabric SQL using Translytical Taskflows for real-time analytics    
 - How to monitor performance using Fabric’s performance dashboard  
-- How to size, monitor, and optimize Fabric capacity for cost and performance efficiency
 
 ## 🛠 Technologies used in this Workshop
 
